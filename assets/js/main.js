@@ -172,3 +172,118 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
     });
+
+
+// Testomonial Slider
+    var testimonialSwiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        speed: 700,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".testimonialSwiper .swiper-pagination",
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: ".testimonialSwiper .testimonial-next",
+            prevEl: ".testimonialSwiper .testimonial-prev",
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            }
+        }
+    });
+
+
+
+  // Expert Slider
+    const expertSwiper = new Swiper(".expertSwiper", {
+
+        slidesPerView: 4,
+        spaceBetween: 24,
+
+        loop: true,
+
+        speed: 700,
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+
+        pagination: {
+            el: ".expert-pagination",
+            clickable: true
+        },
+
+        navigation: {
+            nextEl: ".expert-next",
+            prevEl: ".expert-prev"
+        },
+
+        breakpoints: {
+
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            },
+
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 24
+            }
+
+        }
+
+    });
+
+
+    //Manage paragraph
+    document.querySelectorAll(".doctor-description").forEach(function (paragraph) {
+
+        paragraph.addEventListener("click", function () {
+            this.classList.toggle("expanded");
+        });
+
+    });
+
